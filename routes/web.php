@@ -1,6 +1,9 @@
 <?php
 
-use App\Http\Controllers\siswaController;
+use App\Http\Controllers\masyarakatController;
+use App\Http\Controllers\petugasController;
+use App\Http\Controllers\pengaduanController;
+use App\Http\Controllers\tanggapanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthManager;
 
@@ -20,7 +23,15 @@ Route::get('/', function () {
 });
 
 
-Route ::resource ('siswa', siswaController::class);
+Route ::resource ('masyarakat', masyarakatController::class);
+Route ::resource ('petugas', petugasController::class);
+Route ::resource ('pengaduan', pengaduanController::class);
+Route ::resource ('tanggapan', tanggapanController::class);
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
+
+
 
 Route::group(['middleware' => ['web']], function () {
     // Your routes or controllers here

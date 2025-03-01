@@ -22,18 +22,30 @@
   <h2 class="text-center">Register</h2>
   <form action="{{route('registration.post')}}" method="POST" class="mx-auto mt-3" style="width: 500px;">
     @csrf
-    <div class="mb-3">
-      <label class="form-label">Fullname</label>
-      <input type="text" class="form-control" name="name">
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Email address</label>
-      <input type="email" class="form-control" name="email">
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Password</label>
-      <input type="password" class="form-control" name="password">
-    </div>
+    <div class="form-group">
+      <label for="nik">Nik:</label>
+      <input type="text" class="form-control" id="nik" name="nik" required>
+  </div>
+  <div class="form-group">
+      <label for="nik">Nama:</label>
+      <input type="text" class="form-control" id="nama" name="nama" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" name="email">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" required>
+  </div>
+  <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+  </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
